@@ -1,0 +1,61 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Thu Feb 15 18:38:07 2024
+# Process ID: 17576
+# Current directory: C:/Users/C27Brandon.Sweitzer/code/ece281-ice2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2832 C:\Users\C27Brandon.Sweitzer\code\ece281-ice2\halfAdder.xpr
+# Log file: C:/Users/C27Brandon.Sweitzer/code/ece281-ice2/vivado.log
+# Journal file: C:/Users/C27Brandon.Sweitzer/code/ece281-ice2\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/C27Brandon.Sweitzer/code/ece281-ice2/halfAdder.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source halfAdder_tb.tcl
+synth_design -rtl -name rtl_1
+refresh_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+refresh_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+close_design
+open_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/C27Brandon.Sweitzer/code/ece281-ice2/halfAdder.runs/impl_1/halfAdder.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/C27Brandon.Sweitzer/code/ece281-ice2/halfAdder.runs/impl_1/halfAdder.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+close_sim
+open_project C:/Users/C27Brandon.Sweitzer/code/ece281-lab1/thirtyoneday.xpr
+current_project halfAdder
+close_project
+update_compile_order -fileset sources_1
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+open_hw
+open_run impl_1
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/C27Brandon.Sweitzer/code/ece281-lab1/thirtyoneday.runs/impl_1/thirtyOneDayMonth.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/C27Brandon.Sweitzer/code/ece281-lab1/thirtyoneday.runs/impl_1/thirtyOneDayMonth.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+launch_simulation
+source thirtyOneDayMonth_tb.tcl
+close_sim
